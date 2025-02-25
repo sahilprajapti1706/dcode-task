@@ -1,4 +1,5 @@
 import React from "react";
+import Menubar from "./Menubar";
 
 const Hero = () => {
   return (
@@ -13,13 +14,17 @@ const Hero = () => {
       />
 
       {/* Navbar */}
-      <nav className="absolute top-0 left-0 w-full flex items-center justify-between py-4 px-6 sm:px-10 md:px-20 z-20">
+      <nav className="absolute top-0 left-0 w-full flex items-center justify-start gap-5 py-4 px-6 sm:px-10 md:px-20 z-20">
         {/* Logo */}
         <div className="flex items-center gap-2">
           <img src="./Hlogo.png" alt="Logo" className="w-8 sm:w-10" />
-          <span className="text-white  sm:text-xl md:text-xl font-bold">
+          <span className="text-white sm:text-xl md:text-xl font-bold">
             HACKINDIA
           </span>
+        </div>
+
+        <div className="sticky top-0">
+          <Menubar/>
         </div>
       </nav>
 
@@ -28,10 +33,19 @@ const Hero = () => {
         {/* Centered Logo */}
         <img src="./SignityLogo.png" alt="Centered Logo" className="w-40 sm:w-52 md:w-60" />
 
-        {/* Event Name */}
-        <div className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-wide mt-5">
-          HACKINDIA2025
+        {/* Event Name with Orange Highlight */}
+        <div className="relative mt-5">
+             {/* Orange Div below "Ha" */}
+          <div className="absolute left-[-7px] top-[0%] sm:top-[0%] w-[70px] sm:w-[117px] h-[12px] sm:h-[70px] bg-[#F86720] -z-10 rounded-lg"></div>
+
+          <span className="relative text-4xl sm:text-6xl md:text-7xl font-bold tracking-wide z-10">
+            HACKINDIA2025
+          </span>
+
+         
+         
         </div>
+
         <div className="text-lg sm:text-2xl md:text-2xl font-medium tracking-wide my-5">
           India's Biggest Web3 & AI Hackathon
         </div>
@@ -81,7 +95,7 @@ const Hero = () => {
                 className="transition-all duration-300 group-hover:stroke-[#D026FF]"
               ></path>
             </svg>
-            <span className="relative z-10 text-white font-bold flex justify-center items-center h-[60px] w-[200px] transition-all duration-300 group-hover:text-[#B026FF] text-lg sm:text-lg">
+            <span className="relative z-10 text-white font-bold flex justify-center items-center h-[60px] w-[200px] transition-all duration-300 text-lg sm:text-lg group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]">
               Register Now
             </span>
           </a>

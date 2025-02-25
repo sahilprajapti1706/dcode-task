@@ -1,5 +1,6 @@
 const Navbar = () => {
     return (
+      <div>
       <div className="flex items-center justify-between px-4 sm:px-10 py-4 bg-black shadow-md">
         {/* Logo */}
         <a href="/">
@@ -31,6 +32,10 @@ const Navbar = () => {
             Sign In
           </span>
         </a>
+      </div>
+
+      <div class="bg-slate-800 css-0"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 1440 6" fill="none"><path d="M0 6H75.5L88.5 4.5H198L210 6H331.5L337.5 3.5H667.5L673 6H1043.5L1050.5 3H1198H1440V0H0V6Z" fill="#B026FF" fill-opacity="0.5"></path></svg></div>
+      
       </div>
     );
   };
