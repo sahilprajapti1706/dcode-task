@@ -38,7 +38,7 @@ const Hero = () => {
         </motion.div>
 
         {/*  Menubar */}
-        <div className="lg:block hidden">
+        <div>
           <Menubar />
         </div>
       </nav>

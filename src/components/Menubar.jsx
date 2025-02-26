@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from "react";
+import { Menu, X } from "lucide-react";
+import { div } from "framer-motion/client";
 
 const Menubar = () => {
   // State for menubar sticky
   const [isSticky, setIsSticky] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
+  
 
   useEffect(() => {
     
@@ -31,13 +35,22 @@ const menuItems = [
 
   return (
     <div
-      className={`bg-[#28083A] px-10 py-4 flex justify-center items-center space-x-0 h-[65px] w-[68vw] rounded-xl transition-all duration-300 ${
+      className={`bg-[#28083A] lg:px-10 py-4 flex justify-center items-center h-[65px] lg:w-[68vw]  rounded-xl transition-all duration-300 ${
         isSticky
           ? "fixed top-0 left-[260px] transform shadow-lg z-50" 
           : "relative" 
       }`}
     >
+     
+      <button
+              className="lg:hidden absolute w-full text-white left-30 md:left-80 top-4 "
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
+      </button>
+      
       {/*  menu items */}
+      <div className="hidden lg:flex">
       {menuItems.map((item) => (
         <a key={item.href} href={item.href} className="relative block group">
 
@@ -70,6 +83,28 @@ const menuItems = [
           </span>
         </a>
       ))}
+      </div>
+
+       {/* Mobile Menu */}
+ {isOpen && (
+    <div className="absolute top-[65px] left-0 w-[40vw] bg-[#28083A] flex flex-col items-center gap-2 py-4 lg:hidden shadow-md z-50">
+      {menuItems.map((item) => (
+        <div className="bg-[#28083A]">
+          <a
+          key={item.href}
+          href={item.href}
+          className="text-white text-sm transition-all duration-300 hover:text-purple-400 "
+          onClick={() => setIsOpen(false)}
+        >
+          {item.label}
+        </a>
+        </div>
+        
+      ))}
+    </div>
+  )}
+      
+      
     </div>
   );
 };
