@@ -57,10 +57,10 @@ const Hero = () => {
         <motion.div className="relative mt-5">
           
           <div
-            className="absolute left-[-6px] top-[0%] sm:top-[0%] w-[60px] sm:w-[121px] h-[40px] sm:h-[67px] bg-[#F86720] -z-10 rounded-lg"
+            className="absolute left-[-6px] top-[0%] sm:top-[0%] w-[50px] sm:w-[121px] h-[34px] sm:h-[67px] bg-[#F86720] -z-10 rounded-lg"
           ></div>
 
-          <span className="relative text-4xl sm:text-6xl md:text-7xl font-bold tracking-widest z-10">
+          <span className="relative text-3xl sm:text-6xl md:text-7xl font-bold tracking-wide md:tracking-widest z-10">
             HACKINDIA2025
           </span>
         </motion.div>
