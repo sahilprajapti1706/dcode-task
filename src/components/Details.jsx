@@ -18,8 +18,8 @@ const Details = () => {
         {/* Left Section */}
         <div className="w-full md:w-1/2 flex flex-col justify-end space-y-8 text-center md:text-left">
           {/* Main Heading */}
-          <div className="text-3xl sm:text-4xl font-bold flex flex-col relative z-10">
-            <span className="text-2xl sm:text-6xl">150+</span> Universities Participating
+          <div className="text-2xl sm:text-4xl flex flex-col relative z-10">
+            <span className="font-bold text-2xl sm:text-5xl">150+</span> Universities Participating
           </div>
 
           {/* Stats Section */}

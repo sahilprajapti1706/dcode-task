@@ -23,7 +23,7 @@ const Hero = () => {
           </span>
         </div>
 
-        <div className="sticky top-0">
+        <div className="lg:block hidden">
           <Menubar/>
         </div>
       </nav>
@@ -36,7 +36,7 @@ const Hero = () => {
         {/* Event Name with Orange Highlight */}
         <div className="relative mt-5">
              {/* Orange Div below "Ha" */}
-          <div className="absolute left-[-7px] top-[0%] sm:top-[0%] w-[70px] sm:w-[117px] h-[12px] sm:h-[70px] bg-[#F86720] -z-10 rounded-lg"></div>
+          <div className="absolute left-[-6px] top-[0%] sm:top-[0%] w-[60px] sm:w-[117px] h-[40px] sm:h-[70px] bg-[#F86720] -z-10 rounded-lg"></div>
 
           <span className="relative text-4xl sm:text-6xl md:text-7xl font-bold tracking-wide z-10">
             HACKINDIA2025
