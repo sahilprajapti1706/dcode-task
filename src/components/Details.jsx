@@ -10,12 +10,12 @@ const Details = () => {
       className="relative min-h-[90vh] w-full bg-black flex flex-col px-4 sm:px-8 lg:px-16 overflow-hidden"
     >
      
-      <motion.div
-        className="absolute inset-0 bg-[url('./bg-2.png')] bg-cover bg-center bg-no-repeat opacity-30"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.8 }}
-        transition={{ duration: 1.5 }}
-      ></motion.div>
+     <motion.div
+  className="absolute inset-0 bg-[url('/bg-2.png')] bg-cover bg-center bg-no-repeat opacity-30"
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 0.8 }}
+  transition={{ duration: 1.5 }}
+></motion.div>
 
      
       <motion.div
@@ -24,7 +24,7 @@ const Details = () => {
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        <img src="./effect.png" alt="Effect" className="w-[150px] sm:w-[200px] md:w-[350px]" />
+        <img src="/effect.png" alt="Effect" className="w-[150px] sm:w-[200px] md:w-[350px]" />
       </motion.div>
 
      
