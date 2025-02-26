@@ -11,7 +11,7 @@ const Footer = () => {
     >
       
       <motion.div
-        className="absolute inset-0 bg-[url('./bg-2.png')] bg-cover bg-center bg-no-repeat opacity-30"
+        className="absolute inset-0 bg-[url('/bg-2.png')] bg-cover bg-center bg-no-repeat opacity-30"
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.3 }}
         transition={{ duration: 1 }}
