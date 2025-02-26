@@ -1,31 +1,46 @@
 import React, { useState, useEffect } from "react";
 
 const Menubar = () => {
+  // State for menubar sticky
   const [isSticky, setIsSticky] = useState(false);
 
   useEffect(() => {
+    
     const handleScroll = () => {
       if (window.scrollY > 80) {
-        setIsSticky(true);
+        setIsSticky(true); 
       } else {
-        setIsSticky(false);
+        setIsSticky(false); 
       }
     };
 
+   
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll); 
   }, []);
+
+  // Menu Items 
+const menuItems = [
+  { href: "#overview", label: "Overview" },
+  { href: "#create-team", label: "Create Team" },
+  { href: "#prizes-sponsors", label: "Prize & Sponsor" },
+  { href: "#faqs", label: "FAQs" },
+  { href: "#judging-rules", label: "Judging Rules" },
+  { href: "#resources", label: "Resources" },
+];
 
   return (
     <div
       className={`bg-[#28083A] px-10 py-4 flex justify-center items-center space-x-0 h-[65px] w-[68vw] rounded-xl transition-all duration-300 ${
         isSticky
-          ? "fixed top-0 left-[260px] transform  shadow-lg z-50"
-          : "relative"
+          ? "fixed top-0 left-[260px] transform shadow-lg z-50" 
+          : "relative" 
       }`}
     >
+      {/*  menu items */}
       {menuItems.map((item) => (
         <a key={item.href} href={item.href} className="relative block group">
+
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="158"
@@ -48,17 +63,18 @@ const Menubar = () => {
               className="transition-all duration-300 group-hover:stroke-[#D026FF]"
             ></path>
           </svg>
-          <span className="relative z-10 text-white text-sm flex justify-center items-center h-[53px] w-[150px] transition-all duration-300 group-hover:text-white group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]">
-  {item.label}
-</span>
 
+          
+          <span className="relative z-10 text-white text-sm flex justify-center items-center h-[53px] w-[150px] transition-all duration-300 group-hover:text-white group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]">
+            {item.label}
+          </span>
         </a>
       ))}
     </div>
   );
 };
 
-// Menu Items
+// Menu Items 
 const menuItems = [
   { href: "#overview", label: "Overview" },
   { href: "#create-team", label: "Create Team" },

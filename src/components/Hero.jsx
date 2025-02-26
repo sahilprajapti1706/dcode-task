@@ -10,6 +10,7 @@ const Hero = () => {
       transition={{ duration: 1 }}
       className="relative w-full h-screen overflow-hidden flex flex-col"
     >
+      {/* Background Video */}
       <motion.video
         className="absolute top-0 left-0 w-full h-full object-cover"
         src="./Bg-video.mp4"
@@ -21,8 +22,9 @@ const Hero = () => {
         transition={{ duration: 1.5 }}
       />
 
+      {/* Navbar */}
       <nav className="absolute top-0 left-0 w-full flex items-center justify-start gap-5 py-4 px-6 sm:px-10 md:px-20 z-20">
-
+        {/* Logo Section */}
         <motion.div
           className="flex items-center gap-2"
           initial={{ x: -50, opacity: 0 }}
@@ -35,18 +37,20 @@ const Hero = () => {
           </span>
         </motion.div>
 
+        {/*  Menubar */}
         <div className="lg:block hidden">
           <Menubar />
         </div>
       </nav>
 
+      {/* Hero Section */}
       <motion.div
         className="relative flex flex-col items-center text-white text-center z-10 flex-grow pt-28 sm:pt-28 mb-4"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        {/* Centered Logo */}
+        
         <motion.img
           src="./SignityLogo.png"
           alt="Centered Logo"
@@ -54,8 +58,8 @@ const Hero = () => {
           whileHover={{ scale: 1.1 }}
         />
 
+        {/* Title */}
         <motion.div className="relative mt-5">
-          
           <div
             className="absolute left-[-6px] top-[0%] sm:top-[0%] w-[50px] sm:w-[121px] h-[34px] sm:h-[67px] bg-[#F86720] -z-10 rounded-lg"
           ></div>
@@ -65,6 +69,7 @@ const Hero = () => {
           </span>
         </motion.div>
 
+        {/*  Description */}
         <div className="text-lg sm:text-2xl md:text-2xl font-medium tracking-wide my-5">
           India's Biggest Web3 & AI Hackathon
         </div>
@@ -79,7 +84,7 @@ const Hero = () => {
           February 28 - September 28
         </motion.div>
 
-        {/* Event Details */}
+        {/* Info */}
         <motion.div
           className="flex flex-wrap justify-center items-center gap-3 sm:gap-8 text-sm sm:text-xl font-semibold pt-6 tracking-wider"
           initial={{ opacity: 0 }}
@@ -99,13 +104,14 @@ const Hero = () => {
           </p>
         </motion.div>
 
+        {/* Register Btn */}
         <motion.a
           href="#"
           className="relative flex items-center justify-center w-40 md:w-48 h-12 md:h-[53px] text-gray-700 hover:text-purple-500 mt-8"
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.3 }}
         >
-         
+          
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="100%"
@@ -126,8 +132,8 @@ const Hero = () => {
             ></path>
           </svg>
 
-
-          <span className="absolute inset-0 flex  justify-center items-center font-semibold text-white text-sm md:text-base hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]">
+         
+          <span className="absolute inset-0 flex justify-center items-center font-semibold text-white text-sm md:text-base hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]">
             Register Now
           </span>
         </motion.a>

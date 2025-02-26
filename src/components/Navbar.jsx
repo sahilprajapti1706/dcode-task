@@ -7,8 +7,10 @@ const Navbar = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
+      {/* Navbar Container */}
       <div className="flex items-center justify-between px-4 sm:px-10 py-4 bg-black shadow-md">
-       
+        
+        {/* Logo */}
         <a href="/">
           <motion.img
             src="/Logo.png"
@@ -19,7 +21,7 @@ const Navbar = () => {
           />
         </a>
 
-        
+        {/* Sign In Btn */}
         <motion.a
           href="#"
           className="relative flex items-center justify-center w-40 md:w-48 h-12 md:h-[53px] text-gray-700 hover:text-purple-500"
@@ -47,13 +49,14 @@ const Navbar = () => {
             ></path>
           </svg>
 
-
+          
           <span className="absolute inset-0 flex justify-center items-center font-semibold text-white text-sm md:text-base hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]">
             Sign In
           </span>
         </motion.a>
       </div>
 
+      
       <motion.div
         className="bg-slate-800 css-0"
         initial={{ opacity: 0, y: -10 }}

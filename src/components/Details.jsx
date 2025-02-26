@@ -9,7 +9,7 @@ const Details = () => {
       transition={{ duration: 1 }}
       className="relative min-h-[90vh] w-full bg-black flex flex-col px-4 sm:px-8 lg:px-16 overflow-hidden"
     >
-      
+     
       <motion.div
         className="absolute inset-0 bg-[url('./bg-2.png')] bg-cover bg-center bg-no-repeat opacity-30"
         initial={{ opacity: 0 }}
@@ -36,12 +36,13 @@ const Details = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
         >
-          
+         
           <div className="text-2xl sm:text-4xl flex flex-col relative z-10 hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]">
             <span className="font-bold text-2xl sm:text-5xl">150+</span> Universities Participating
           </div>
 
-          {/* Stats Section */}
+          {/* Info Section */}
+
           <motion.div
             className="grid grid-cols-1 sm:grid-cols-3 gap-4"
             initial="hidden"
@@ -54,6 +55,7 @@ const Details = () => {
               },
             }}
           >
+            {/* Info */}
             {[
               { number: "72+", label: "Judges" },
               { number: "21", label: "Hackathons" },
@@ -64,20 +66,23 @@ const Details = () => {
                 className="flex flex-col hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]"
                 variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
               >
+               
                 <span className="font-bold text-2xl sm:text-5xl">{stat.number}</span>
+               
                 <span className="text-2xl">{stat.label}</span>
               </motion.div>
             ))}
           </motion.div>
         </motion.div>
 
-        
+        {/* Right Section */}
         <motion.div
           className="w-full md:w-1/2 flex justify-center md:justify-start"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
         >
+          {/* Image */}
           <motion.img
             src="yt-img.png"
             alt="Right Section"
