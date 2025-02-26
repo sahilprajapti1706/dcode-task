@@ -13,7 +13,7 @@ const Details = () => {
       <motion.div
         className="absolute inset-0 bg-[url('./bg-2.png')] bg-cover bg-center bg-no-repeat opacity-30"
         initial={{ opacity: 0 }}
-        animate={{ opacity: 0.3 }}
+        animate={{ opacity: 0.8 }}
         transition={{ duration: 1.5 }}
       ></motion.div>
 
