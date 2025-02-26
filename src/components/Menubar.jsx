@@ -18,7 +18,7 @@ const Menubar = () => {
 
   return (
     <div
-      className={`bg-[#28083A] px-10 py-4 flex justify-center items-center space-x-0 h-[65px] w-[67vw] rounded-xl transition-all duration-300 ${
+      className={`bg-[#28083A] px-10 py-4 flex justify-center items-center space-x-0 h-[65px] w-[68vw] rounded-xl transition-all duration-300 ${
         isSticky
           ? "fixed top-0 left-[260px] transform  shadow-lg z-50"
           : "relative"
@@ -62,7 +62,7 @@ const Menubar = () => {
 const menuItems = [
   { href: "#overview", label: "Overview" },
   { href: "#create-team", label: "Create Team" },
-  { href: "#prizes-sponsors", label: "Prizes & Sponsors" },
+  { href: "#prizes-sponsors", label: "Prize & Sponsor" },
   { href: "#faqs", label: "FAQs" },
   { href: "#judging-rules", label: "Judging Rules" },
   { href: "#resources", label: "Resources" },

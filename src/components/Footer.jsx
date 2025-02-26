@@ -29,7 +29,7 @@ const Footer = () => {
           className="text-sm md:text-xl font-medium"
           whileHover={{ scale: 1.05 }}
         >
-          © 2024 DcodeBlock
+         Copyright © 2024 DcodeBlock
         </motion.div>
 
         

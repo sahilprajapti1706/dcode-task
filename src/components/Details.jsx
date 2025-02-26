@@ -37,7 +37,7 @@ const Details = () => {
           transition={{ duration: 1 }}
         >
           
-          <div className="text-2xl sm:text-4xl flex flex-col relative z-10">
+          <div className="text-2xl sm:text-4xl flex flex-col relative z-10 hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]">
             <span className="font-bold text-2xl sm:text-5xl">150+</span> Universities Participating
           </div>
 
@@ -61,7 +61,7 @@ const Details = () => {
             ].map((stat, index) => (
               <motion.div
                 key={index}
-                className="flex flex-col"
+                className="flex flex-col hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]"
                 variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
               >
                 <span className="font-bold text-2xl sm:text-5xl">{stat.number}</span>

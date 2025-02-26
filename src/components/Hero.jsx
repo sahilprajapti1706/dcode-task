@@ -27,10 +27,10 @@ const Hero = () => {
           className="flex items-center gap-2"
           initial={{ x: -50, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 1.5 }}
         >
           <img src="./Hlogo.png" alt="Logo" className="w-8 sm:w-10" />
-          <span className="text-white sm:text-xl md:text-xl font-bold">
+          <span className="text-white sm:text-xl md:text-xl font-bold tracking-wider">
             HACKINDIA
           </span>
         </motion.div>
@@ -57,10 +57,10 @@ const Hero = () => {
         <motion.div className="relative mt-5">
           
           <div
-            className="absolute left-[-6px] top-[0%] sm:top-[0%] w-[60px] sm:w-[112px] h-[40px] sm:h-[70px] bg-[#F86720] -z-10 rounded-lg"
+            className="absolute left-[-6px] top-[0%] sm:top-[0%] w-[60px] sm:w-[121px] h-[40px] sm:h-[67px] bg-[#F86720] -z-10 rounded-lg"
           ></div>
 
-          <span className="relative text-4xl sm:text-6xl md:text-7xl font-bold tracking-wide z-10">
+          <span className="relative text-4xl sm:text-6xl md:text-7xl font-bold tracking-widest z-10">
             HACKINDIA2025
           </span>
         </motion.div>
@@ -81,7 +81,7 @@ const Hero = () => {
 
         {/* Event Details */}
         <motion.div
-          className="flex flex-wrap justify-center items-center gap-3 sm:gap-8 text-sm sm:text-xl font-semibold pt-6"
+          className="flex flex-wrap justify-center items-center gap-3 sm:gap-8 text-sm sm:text-xl font-semibold pt-6 tracking-wider"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
@@ -99,28 +99,38 @@ const Hero = () => {
           </p>
         </motion.div>
 
-        <motion.div className="pt-10" whileHover={{ scale: 1.1 }}>
-          <a href="#" className="relative block group">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="200"
-              height="58"
-              viewBox="0 0 200 70"
-              fill="none"
-              className="absolute top-0 left-0 transition-all duration-300 group-hover:stroke-[#D026FF]"
-            >
-              <path
-                d="M65.2183 7.79534L65.3456 7.88201H65.4997H189.5V60.0939L179.271 68.7824H12.9377V0.5H57.4392L65.2183 7.79534Z"
-                fill="#D9D9D9"
-                fillOpacity="0.05"
-                stroke="#B026FF"
-              ></path>
-            </svg>
-            <span className="relative z-10 text-white font-bold flex justify-center items-center h-[60px] w-[200px] transition-all duration-300 text-lg sm:text-lg">
-              Register Now
-            </span>
-          </a>
-        </motion.div>
+        <motion.a
+          href="#"
+          className="relative flex items-center justify-center w-40 md:w-48 h-12 md:h-[53px] text-gray-700 hover:text-purple-500 mt-8"
+          whileHover={{ scale: 1.05 }}
+          transition={{ duration: 0.3 }}
+        >
+         
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="100%"
+            height="100%"
+            viewBox="0 0 150 53"
+            fill="none"
+          >
+            <path
+              d="M55.2183 5.79534L55.3456 5.88201H55.4997H149.5V45.0939L139.271 51.7824H8.93774V0.5H47.4392L55.2183 5.79534Z"
+              fill="#D9D9D9"
+              fillOpacity="0.05"
+              stroke="#B026FF"
+            ></path>
+            <path
+              d="M2.35937 47.8035H0.35V52.65H5.54843V0.349998H0.35V35.6037L2.61222 37.9673L2.70937 38.0688V38.2093V47.4535V47.8035H2.35937Z"
+              stroke="#B026FF"
+              strokeWidth="0.7"
+            ></path>
+          </svg>
+
+
+          <span className="absolute inset-0 flex  justify-center items-center font-semibold text-white text-sm md:text-base hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]">
+            Register Now
+          </span>
+        </motion.a>
       </motion.div>
     </motion.div>
   );

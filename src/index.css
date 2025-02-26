@@ -2,8 +2,7 @@
 
 @font-face {
   font-family: 'Proxon';
-  src: url('./fonts/Proxon-Regular.woff2') format('woff2'),
-       url('./fonts/PROXON.ttf') format('truetype');
+  src: url('/font/PROXON.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
