@@ -12,21 +12,26 @@ Make sure you have the following installed on your system:
 ## Installation
 
 1. **Clone the repository**  
+   Using HTTPS:  
    ```sh
    git clone https://github.com/sahilprajapti1706/dcode-task.git
-   ```
-   Replace `<repository-url>` with the actual URL of your GitHub repository.
+   ```  
+   or
+
+   Using SSH (recommended for contributors):  
+   ```sh
+   git clone git@github.com:sahilprajapti1706/dcode-task.git
+   ```  
 
 2. **Navigate to the project directory**  
    ```sh
    cd dcode-task
-   ```
-   Replace `project-name` with your project's folder name.
+   ```  
 
 3. **Install dependencies**  
    ```sh
    npm install
-   ```
+   ```  
 
 ## Running the Project
 
@@ -47,6 +52,3 @@ npm run build
 ```
 
 This will generate optimized static files inside the `dist` directory. -->
-
-
----
